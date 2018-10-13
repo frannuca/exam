@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <math.h>
 #include <vector>
+#include <iomanip>
 
 #define M_PIl          3.141592653589793238462643383279502884L
 
@@ -30,7 +31,7 @@ inline double distance(const Point& p1, const Point &p2)
 
 inline std::ostream& operator<<(std::ostream& os, const Point& p)
 {
-	os << "(" << p.x << "," << p.y << ")";
+	os << "(" << std::setprecision(5) << p.x << "," << std::setprecision(5) << p.y << ")";
 	return os;
 }
 inline std::ostream& operator<<(std::ostream& os, const SHAPES& p)
